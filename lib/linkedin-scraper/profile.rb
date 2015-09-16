@@ -228,6 +228,7 @@ module Linkedin
     def http_client
       Mechanize.new do |agent|
         agent.user_agent_alias = USER_AGENTS.sample
+        agent.set_proxy('117.136.234.11', 82)
         agent.max_history = 0
       end
     end
